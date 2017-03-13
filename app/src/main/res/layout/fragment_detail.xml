@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name ="person"
+            type="com.kalashnyk.denys.task_5_list_person_search.model.Person" />
+
+    </data>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+
+                android:id="@+id/text_view_details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{person.name}"
+                android:layout_margin="1dp"/>
+                <!--android:onClick="@{view -> listener.onPersonModelCliced(person)}"-->
+
+            <TextView
+                android:id="@+id/text_view_details_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{person.surname}"
+                android:layout_below="@id/text_view_details_name"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:id="@+id/text_view_details_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{person.phoneNumber}"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="1dp"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:id="@+id/text_view_details_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{person.mail}"
+                android:layout_below="@id/text_view_details_phone"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="1dp"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:id="@+id/text_view_details_skype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{person.skype}"
+                android:layout_below="@id/text_view_details_mail"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="1dp"
+                android:layout_alignParentRight="true" />
+            <ImageView
+
+                android:id="@+id/image"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@{person.foto}"/>
+        </RelativeLayout>
+
+
+
+</layout>
